@@ -3,7 +3,7 @@
 #include <libdaa/sorting/quicksort.hpp>
 
 using quicksort_vec_int = libdaa::sorting::quicksort<std::vector<int>, int>;
-using quicksort_vec_double =
+using quicksort_vec_float =
   libdaa::sorting::quicksort<std::vector<double>, double>;
 using quicksort_vec_string =
   libdaa::sorting::quicksort<std::vector<std::string>, std::string>;
@@ -57,13 +57,13 @@ class quicksort_ordered_vector_double : public ::testing::Test {
               0.0);
 
     qs_vec_double_first =
-      quicksort_vec_double(quicksort_vec_double::pivot::FIRST);
+      quicksort_vec_float(quicksort_vec_float::pivot::FIRST);
     qs_vec_double_last =
-      quicksort_vec_double(quicksort_vec_double::pivot::LAST);
+      quicksort_vec_float(quicksort_vec_float::pivot::LAST);
     qs_vec_double_middle =
-      quicksort_vec_double(quicksort_vec_double::pivot::MIDDLE);
+      quicksort_vec_float(quicksort_vec_float::pivot::MIDDLE);
     qs_vec_double_median_of_three =
-      quicksort_vec_double(quicksort_vec_double::pivot::MEDIAN_OF_THREE);
+      quicksort_vec_float(quicksort_vec_float::pivot::MEDIAN_OF_THREE);
   }
 
   void TearDown() override {}
@@ -73,10 +73,10 @@ class quicksort_ordered_vector_double : public ::testing::Test {
   std::vector<double> vec_double;
   std::vector<double> vec_double_expected;
 
-  quicksort_vec_double qs_vec_double_first;
-  quicksort_vec_double qs_vec_double_last;
-  quicksort_vec_double qs_vec_double_middle;
-  quicksort_vec_double qs_vec_double_median_of_three;
+  quicksort_vec_float qs_vec_double_first;
+  quicksort_vec_float qs_vec_double_last;
+  quicksort_vec_float qs_vec_double_middle;
+  quicksort_vec_float qs_vec_double_median_of_three;
 };
 
 /**

@@ -3,7 +3,8 @@ add_rules("mode.debug", "mode.release")
 set_warnings("all", "error")
 add_includedirs("include", "/usr/local/include", "/usr/include")
 
-add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden")
+add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden",
+            "-fno-trapping-math", "-Ofast")
 
 set_optimize("fastest")
 
@@ -34,6 +35,12 @@ target("test")
 set_kind("binary")
 add_files("test/**/*.cpp", "test/main.cpp")
 add_packages(table.unpack(test_deps))
+add_deps("libdaa")
+
+-- standalone
+target("main")
+set_kind("binary")
+add_files("src/main.cpp")
 add_deps("libdaa")
 
 --
