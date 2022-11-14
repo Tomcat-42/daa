@@ -10,7 +10,7 @@ project(daa LANGUAGES CXX C)
 # target
 add_library(daa SHARED "")
 set_target_properties(daa PROPERTIES OUTPUT_NAME "daa")
-set_target_properties(daa PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/linux/x86_64/release")
+set_target_properties(daa PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/..")
 add_dependencies(daa libdaa)
 target_include_directories(daa PRIVATE
     include
