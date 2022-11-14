@@ -20,6 +20,7 @@ add_requires("pybind11", "gtest", "gmock")
 target("libdaa")
 set_kind("static")
 add_files("src/libdaa/**/*.cpp")
+set_default(false)
 add_packages(table.unpack(lib_deps))
 
 -- python bindings library
@@ -27,6 +28,8 @@ target("daa")
 set_kind("shared")
 set_prefixname("")
 add_packages(table.unpack(python_lib_deps))
+set_targetdir("..")
+set_default(true)
 add_files("src/daa/**/*.cpp")
 add_deps("libdaa")
 
@@ -34,12 +37,14 @@ add_deps("libdaa")
 target("test")
 set_kind("binary")
 add_files("test/**/*.cpp", "test/main.cpp")
+set_default(false)
 add_packages(table.unpack(test_deps))
 add_deps("libdaa")
 
 -- standalone
 target("main")
 set_kind("binary")
+set_default(false)
 add_files("src/main.cpp")
 add_deps("libdaa")
 

@@ -3,4 +3,3 @@
 # This script compile the project and copy the .so lib to the parent dir
 make daa
 cp build/linux/x86_64/release/daa.so ..
-make clean
