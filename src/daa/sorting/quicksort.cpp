@@ -18,7 +18,7 @@ using quicksort_string = libdaa::sorting::quicksort<std::string, char>;
 
 PYBIND11_MAKE_OPAQUE(std::vector<int>);
 PYBIND11_MAKE_OPAQUE(std::vector<float>);
-PYBIND11_MAKE_OPAQUE(std::vector<std::string>);
+// PYBIND11_MAKE_OPAQUE(std::vector<std::string>);
 
 PYBIND11_MODULE(daa, m) {
   m.doc() = "Design and Analysis of Algorithms";
