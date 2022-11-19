@@ -1,6 +1,8 @@
 set_languages("c++11")
 add_rules("mode.debug", "mode.release")
 set_warnings("all", "error")
+
+-- NOTE: Change later to a more automated config
 add_includedirs("include", "/usr/local/include", "/usr/include")
 
 add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden",
@@ -8,7 +10,6 @@ add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden",
 
 set_optimize("fastest")
 
-add_ldflags("-lgtest")
 -- set_optimize("agressive")
 
 local lib_deps = {}
@@ -20,7 +21,7 @@ add_requires("pybind11", "gtest", "gmock")
 -- main C++ library to be used with the Python bindings
 target("libdaa")
 set_kind("static")
-set_targetdir("..")
+set_targetdir("")
 add_files("src/libdaa/**/*.cpp")
 -- set_default(false)
 add_packages(table.unpack(lib_deps))
@@ -29,7 +30,7 @@ add_packages(table.unpack(lib_deps))
 target("daa")
 set_kind("shared")
 set_prefixname("")
-set_targetdir("..")
+set_targetdir("")
 add_packages(table.unpack(python_lib_deps))
 -- set_default(true)
 add_files("src/daa/**/*.cpp")
@@ -39,6 +40,7 @@ add_deps("libdaa")
 target("test")
 set_kind("binary")
 add_files("test/**/*.cpp", "test/main.cpp")
+add_ldflags("-lgtest")
 -- set_default(false)
 add_packages(table.unpack(test_deps))
 add_deps("libdaa")
