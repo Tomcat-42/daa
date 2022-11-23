@@ -16,6 +16,11 @@
 namespace libdaa::sorting {
 
 /**
+ * @brief Pivot selection method enumeration
+ */
+enum class pivot { FIRST, MIDDLE, LAST, MEDIAN_OF_THREE };
+
+/**
  * @brief QuickSort implementation
  *
  * @tparam C Container Container type
@@ -24,11 +29,6 @@ namespace libdaa::sorting {
 template <typename C, typename T>
 class quicksort {
  public:
-  /**
-   * @brief Pivot selection method enumeration
-   */
-  enum class pivot { FIRST, MIDDLE, LAST, MEDIAN_OF_THREE };
-
   /**
    * @brief Construct a new quicksort object
    *
@@ -62,7 +62,8 @@ class quicksort {
    * @brief Pivot to partition function map
    */
   static std::unordered_map<
-    pivot, std::function<std::intmax_t(C &, const std::intmax_t, const std::intmax_t)>>
+    pivot,
+    std::function<std::intmax_t(C &, const std::intmax_t, const std::intmax_t)>>
     pivot_map;
 
   /**
@@ -134,9 +135,8 @@ quicksort<C, T>::quicksort(const pivot p)
   : pivot_(p), partition(pivot_map[p]) {}
 
 template <typename C, typename T>
-std::unordered_map<
-  typename quicksort<C, T>::pivot,
-  std::function<std::intmax_t(C &, const std::intmax_t, const std::intmax_t)>>
+std::unordered_map<pivot, std::function<std::intmax_t(C &, const std::intmax_t,
+                                                      const std::intmax_t)>>
   quicksort<C, T>::pivot_map = {
     {pivot::FIRST, quicksort<C, T>::partition_first},
     {pivot::MIDDLE, quicksort<C, T>::partition_middle},

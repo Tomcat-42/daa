@@ -56,7 +56,7 @@ void test_my_quicksort(const int n) {
   // std::reverse(std::begin(arr), std::end(arr));
 
   auto start = std::chrono::high_resolution_clock::now();
-  auto p = libdaa::sorting::quicksort<std::vector<int>, int>::pivot::FIRST;
+  auto p = libdaa::sorting::pivot::FIRST;
   libdaa::sorting::quicksort<std::vector<int>, int>(p).sort(arr);
   auto end = std::chrono::high_resolution_clock::now();
 
