@@ -2,9 +2,9 @@
 
 #include <algorithm>
 #include <chrono>
+#include <daa/sorting/quicksort.hpp>
 #include <iostream>
 #include <iterator>
-#include <libdaa/sorting/quicksort.hpp>
 #include <numeric>
 
 int divideSortPivot(int arr[], int left, int right) {
@@ -56,12 +56,12 @@ void test_my_quicksort(const int n) {
   // std::reverse(std::begin(arr), std::end(arr));
 
   auto start = std::chrono::high_resolution_clock::now();
-  auto p = libdaa::sorting::pivot::FIRST;
-  libdaa::sorting::quicksort<std::vector<int>, int>(p).sort(arr);
+  auto p = daa::sorting::pivot::FIRST;
+  daa::sorting::quicksort<std::vector<int>, int>(p).sort(arr);
   auto end = std::chrono::high_resolution_clock::now();
 
   std::chrono::duration<double> elapsed = end - start;
-  std::cout << "libdaa::sorting::quicksort -> Elapsed time: " << elapsed.count()
+  std::cout << "daa::sorting::quicksort -> Elapsed time: " << elapsed.count()
             << std::endl;
 }
 

@@ -1,13 +1,13 @@
 #include <gtest/gtest.h>
 
-#include <libdaa/sorting/quicksort.hpp>
+#include <daa/sorting/quicksort.hpp>
 
-using quicksort_vec_int = libdaa::sorting::quicksort<std::vector<int>, int>;
+using quicksort_vec_int = daa::sorting::quicksort<std::vector<int>, int>;
 using quicksort_vec_double =
-  libdaa::sorting::quicksort<std::vector<double>, double>;
+  daa::sorting::quicksort<std::vector<double>, double>;
 using quicksort_vec_string =
-  libdaa::sorting::quicksort<std::vector<std::string>, std::string>;
-using quicksort_string = libdaa::sorting::quicksort<std::string, char>;
+  daa::sorting::quicksort<std::vector<std::string>, std::string>;
+using quicksort_string = daa::sorting::quicksort<std::string, char>;
 
 /**
  * @brief Test fixture for quicksort reverse ordered vector int
@@ -23,11 +23,11 @@ class quicksort_reverse_ordered_vector_int : public ::testing::Test {
     std::reverse(std::begin(vec_int), std::end(vec_int));
     std::iota(std::begin(vec_int_expected), std::end(vec_int_expected), 0);
 
-    qs_vec_int_first = quicksort_vec_int(libdaa::sorting::pivot::FIRST);
-    qs_vec_int_last = quicksort_vec_int(libdaa::sorting::pivot::LAST);
-    qs_vec_int_middle = quicksort_vec_int(libdaa::sorting::pivot::MIDDLE);
+    qs_vec_int_first = quicksort_vec_int(daa::sorting::pivot::FIRST);
+    qs_vec_int_last = quicksort_vec_int(daa::sorting::pivot::LAST);
+    qs_vec_int_middle = quicksort_vec_int(daa::sorting::pivot::MIDDLE);
     qs_vec_int_median_of_three =
-      quicksort_vec_int(libdaa::sorting::pivot::MEDIAN_OF_THREE);
+      quicksort_vec_int(daa::sorting::pivot::MEDIAN_OF_THREE);
   }
 
   void TearDown() override {}
@@ -58,14 +58,11 @@ class quicksort_reverse_ordered_vector_double : public ::testing::Test {
     std::iota(std::begin(vec_double_expected), std::end(vec_double_expected),
               0.0);
 
-    qs_vec_double_first =
-      quicksort_vec_double(libdaa::sorting::pivot::FIRST);
-    qs_vec_double_last =
-      quicksort_vec_double(libdaa::sorting::pivot::LAST);
-    qs_vec_double_middle =
-      quicksort_vec_double(libdaa::sorting::pivot::MIDDLE);
+    qs_vec_double_first = quicksort_vec_double(daa::sorting::pivot::FIRST);
+    qs_vec_double_last = quicksort_vec_double(daa::sorting::pivot::LAST);
+    qs_vec_double_middle = quicksort_vec_double(daa::sorting::pivot::MIDDLE);
     qs_vec_double_median_of_three =
-      quicksort_vec_double(libdaa::sorting::pivot::MEDIAN_OF_THREE);
+      quicksort_vec_double(daa::sorting::pivot::MEDIAN_OF_THREE);
   }
 
   void TearDown() override {}
@@ -96,14 +93,11 @@ class quicksort_reverse_ordered_vector_string : public ::testing::Test {
     std::iota(std::begin(vec_string_expected), std::end(vec_string_expected),
               0);
 
-    qs_vec_string_first =
-      quicksort_vec_string(libdaa::sorting::pivot::FIRST);
-    qs_vec_string_last =
-      quicksort_vec_string(libdaa::sorting::pivot::LAST);
-    qs_vec_string_middle =
-      quicksort_vec_string(libdaa::sorting::pivot::MIDDLE);
+    qs_vec_string_first = quicksort_vec_string(daa::sorting::pivot::FIRST);
+    qs_vec_string_last = quicksort_vec_string(daa::sorting::pivot::LAST);
+    qs_vec_string_middle = quicksort_vec_string(daa::sorting::pivot::MIDDLE);
     qs_vec_string_median_of_three =
-      quicksort_vec_string(libdaa::sorting::pivot::MEDIAN_OF_THREE);
+      quicksort_vec_string(daa::sorting::pivot::MEDIAN_OF_THREE);
   }
 
   void TearDown() override {}
@@ -131,11 +125,11 @@ class quicksort_reverse_ordered_string : public ::testing::Test {
 
     std::reverse(std::begin(str), std::end(str));
 
-    qs_str_first = quicksort_string(libdaa::sorting::pivot::FIRST);
-    qs_str_last = quicksort_string(libdaa::sorting::pivot::LAST);
-    qs_str_middle = quicksort_string(libdaa::sorting::pivot::MIDDLE);
+    qs_str_first = quicksort_string(daa::sorting::pivot::FIRST);
+    qs_str_last = quicksort_string(daa::sorting::pivot::LAST);
+    qs_str_middle = quicksort_string(daa::sorting::pivot::MIDDLE);
     qs_str_median_of_three =
-      quicksort_string(libdaa::sorting::pivot::MEDIAN_OF_THREE);
+      quicksort_string(daa::sorting::pivot::MEDIAN_OF_THREE);
   }
 
   void TearDown() override {}

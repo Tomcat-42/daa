@@ -19,22 +19,22 @@ local test_deps = {"gtest", "gmock"}
 add_requires("pybind11", "gtest", "gmock")
 
 -- main C++ library to be used with the Python bindings
-target("libdaa")
+target("daa")
 set_kind("static")
 -- set_targetdir(".")
-add_files("src/libdaa/**/*.cpp")
+add_files("src/daa/**/*.cpp")
 -- set_default(false)
 add_packages(table.unpack(lib_deps))
 
 -- python bindings library
-target("daa")
+target("pydaa")
 set_kind("shared")
 set_prefixname("")
 -- set_targetdir(".")
 add_packages(table.unpack(python_lib_deps))
 -- set_default(true)
-add_files("src/daa/**/*.cpp")
-add_deps("libdaa")
+add_files("src/pydaa/**/*.cpp")
+add_deps("daa")
 
 -- test target
 target("test")
@@ -43,11 +43,11 @@ add_files("test/**/*.cpp", "test/main.cpp")
 add_ldflags("-lgtest")
 -- set_default(false)
 add_packages(table.unpack(test_deps))
-add_deps("libdaa")
+add_deps("daa")
 
 -- standalone
 target("main")
 set_kind("binary")
 -- set_default(false)
 add_files("src/main.cpp")
-add_deps("libdaa")
+add_deps("daa")

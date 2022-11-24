@@ -4,16 +4,16 @@
 
 #include <algorithm>
 #include <chrono>
+#include <daa/sorting/quicksort.hpp>
 #include <functional>
 #include <iostream>
-#include <libdaa/sorting/quicksort.hpp>
 #include <memory>
 #include <numeric>
 #include <random>
 #include <unordered_map>
 #include <vector>
 
-namespace libdaa::sorting {
+namespace daa::sorting {
 
 /**
  * @brief Pivot selection method enumeration
@@ -263,4 +263,4 @@ std::chrono::duration<double> quicksort<C, T>::sort(C &v) {
   return end - start;
 }
 
-}  // namespace libdaa::sorting
+}  // namespace daa::sorting

@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 
 #include <chrono>
+#include <daa/sorting/quicksort.hpp>
 #include <iostream>
-#include <libdaa/sorting/quicksort.hpp>
 #include <numeric>
 #include <vector>
 
