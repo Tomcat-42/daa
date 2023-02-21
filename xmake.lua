@@ -1,4 +1,4 @@
-set_languages("c++11")
+set_languages("c++20")
 add_rules("mode.debug", "mode.release")
 set_warnings("all", "error")
 
@@ -9,14 +9,15 @@ add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden",
             "-fno-trapping-math", "-Ofast")
 
 set_optimize("fastest")
+set_policy("check.auto_ignore_flags", false)
 
 -- set_optimize("agressive")
 
 local lib_deps = {}
 local python_lib_deps = {"pybind11"}
-local test_deps = {"gtest", "gmock"}
+local test_deps = {"gtest"}
 
-add_requires("pybind11", "gtest", "gmock")
+add_requires("pybind11", "gtest")
 
 -- main C++ library to be used with the Python bindings
 target("daa")
@@ -33,7 +34,7 @@ set_prefixname("")
 -- set_targetdir(".")
 add_packages(table.unpack(python_lib_deps))
 -- set_default(true)
-add_files("src/pydaa/**/*.cpp")
+add_files("src/pydaa/**/*.cpp", "src/pydaa/pydaa.cpp")
 add_deps("daa")
 
 -- test target

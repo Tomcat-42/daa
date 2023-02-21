@@ -3,97 +3,34 @@
 #include <algorithm>
 #include <chrono>
 #include <daa/sorting/quicksort.hpp>
+#include <daa/dynamic_programming/knapsack.hpp>
+#include <daa/greedy/knapsack.hpp>
 #include <iostream>
 #include <iterator>
 #include <numeric>
 
-int divideSortPivot(int arr[], int left, int right) {
-  int pivotUnsorted = ((right - left) / 2) + left;
-  int pivot =
-    arr[pivotUnsorted];  // pivot from middle of array; right - left gives us
-  // the range, divide than range in half, then add that
-  // to the start position(left)
-  int i = -1;
-  for (int j = left; j <= right;
-       ++j) {  // loop finds true index of pivot to use for comparison in next
-    // loop(left/right comparison swaps) - affects time complexity as
-    // entire data structure must be iterated through
-    if (arr[j] <= pivot) {
-      ++i;
-    }
-  }
-  int pivotIndex = i + left;  // amount of elements less than/equal to pivot,
-  // plus index of where we began searching
-  i = left - 1;
-  for (int j = left; j <= right; ++j) {
-    if (arr[j] <= pivot) {
-      ++i;
-      if (j == pivotUnsorted) pivotUnsorted = i;
-      std::swap(arr[i], arr[j]);
-    }
-  }
-  std::swap(arr[pivotIndex], arr[pivotUnsorted]);
-  return (pivotIndex);
-}
-
-void quicksort(int arr[], int left, int right) {
-  if (left >=
-      right)  // base case: if leftmost index of "sub" array we are recursively
-    // sorting is greater than rightmost, then return.
-    return;
-
-  int pivot = divideSortPivot(arr, left, right);
-
-  quicksort(arr, left, pivot - 1);
-  quicksort(arr, pivot + 1, right);
-}
-
-void quicksort(int arr[], int arrLength) { quicksort(arr, 0, arrLength - 1); }
-
-void test_my_quicksort(const int n) {
-  std::vector<int> arr(n);
-  std::iota(std::begin(arr), std::end(arr), 0);
-  // std::reverse(std::begin(arr), std::end(arr));
-
-  auto start = std::chrono::high_resolution_clock::now();
-  auto p = daa::sorting::pivot::FIRST;
-  daa::sorting::quicksort<std::vector<int>, int>(p).sort(arr);
-  auto end = std::chrono::high_resolution_clock::now();
-
-  std::chrono::duration<double> elapsed = end - start;
-  std::cout << "daa::sorting::quicksort -> Elapsed time: " << elapsed.count()
-            << std::endl;
-}
-
-void test_other_quicksort(const int n) {
-  int arr[n];
-  std::iota(arr, arr + n, 0);
-
-  auto start = std::chrono::high_resolution_clock::now();
-  quicksort(arr, n);
-  auto end = std::chrono::high_resolution_clock::now();
-
-  std::chrono::duration<double> elapsed = end - start;
-  std::cout << "quicksort -> Elapsed time: " << elapsed.count() << std::endl;
-}
-
-void test_std_sort(const int n) {
-  std::vector<int> arr(n);
-  std::iota(std::begin(arr), std::end(arr), 0);
-  // std::reverse(std::begin(arr), std::end(arr));
-
-  auto start = std::chrono::high_resolution_clock::now();
-  std::sort(arr.begin(), arr.end());
-  auto end = std::chrono::high_resolution_clock::now();
-
-  std::chrono::duration<double> elapsed = end - start;
-  std::cout << "std::sort -> Elapsed time: " << elapsed.count() << std::endl;
-}
-
 int main() {
-  const int n = 1000000;
-  test_my_quicksort(n);
-  test_other_quicksort(n);
-  test_std_sort(n);
-  return 0;
+    std::cout << "Dynamic Programming Knapsack:" << std::endl;
+    std::intmax_t w = 300;
+    std::vector<std::intmax_t> weights = { 14, 16, 14, 19, 10, 11, 10, 11};
+    std::vector<std::intmax_t> values = { 98, 101, 73, 65, 20, 40, 20, 63};
+    std::intmax_t n = values.size();
+
+    const auto &[selected, total_value, execution_time] = daa::dynamic_programming::knapsack(w, weights, values, n);
+
+    std::cout << "Total value: " << total_value << std::endl;
+    std::cout << "Execution time: " << execution_time << std::endl;
+    std::cout << "Selected items: ";
+    std::copy(selected.begin(), selected.end(), std::ostream_iterator<std::intmax_t>(std::cout, " "));
+
+    std::cout << std::endl << std::endl;
+
+    std::cout << "Greedy Knapsack:" << std::endl;
+    const auto &[selected_greedy, total_value_greedy, execution_time_greedy] = daa::greedy::knapsack(w, weights, values, n);
+    std::cout << "Total value: " << total_value_greedy << std::endl;
+    std::cout << "Execution time: " << execution_time_greedy << std::endl;
+    std::cout << "Selected items: ";
+    std::copy(selected_greedy.begin(), selected_greedy.end(), std::ostream_iterator<std::intmax_t>(std::cout, " "));
+
+    return 0;
 }
