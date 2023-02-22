@@ -10,40 +10,37 @@
 // Path: knapsack.hpp
 namespace daa::greedy {
 
-
-/// Solves the knapsack problem using a greedy algorithm (with pre-sorting)
-/// @param weight The maximum weight the knapsack can hold.
-/// @param weights The weights of the items.
-/// @param values The values of the items.
-/// @param n The number of items.
-/// @return A Tuple containing the items to be selected, the maximum value and
-/// the time taken to solve the problem.
-std::tuple<std::vector<std::intmax_t>, std::intmax_t,
-    std::chrono::duration<double>>
-    knapsack(std::intmax_t weight, const std::vector<std::intmax_t>& weights,
-const std::vector<std::intmax_t>& values, std::size_t n) {
+std::tuple<std::chrono::duration<double>, std::intmax_t, std::vector<std::intmax_t>>
+        knapsack(std::intmax_t weight, const std::vector<std::intmax_t>& values,
+const std::vector<std::intmax_t>& weights) {
     auto start = std::chrono::high_resolution_clock::now();
+    auto n = weights.size();
     std::intmax_t max_value = 0;
     std::vector<std::intmax_t> selected_items;
-    std::vector<std::pair<std::intmax_t, std::intmax_t>> items(n);
+    std::vector<std::tuple<std::intmax_t, std::intmax_t, std::intmax_t>> items(n);
+
+    // the value of the item is the first element of the tuple
+    // the weight of the item is the second element of the tuple
+    // the index(original position) of the item is the third element of the tuple
     for (std::size_t i = 0; i < n; ++i) {
-        items[i] = std::make_pair(values[i], weights[i]);
+        items[i] = {values[i], weights[i], i};
     }
-    std::sort(items.begin(), items.end(),
-              [](const std::pair<std::intmax_t, std::intmax_t>& a,
-    const std::pair<std::intmax_t, std::intmax_t>& b) {
-        return a.first > b.first;
+
+    // sort the items in descending order of the value/weight ratio
+    std::sort(items.begin(), items.end(), [](const auto& a, const auto& b) {
+        return std::get<0>(a) * std::get<1>(b) > std::get<0>(b) * std::get<1>(a);
     });
 
-    for (std::size_t i = 0; i < n; ++i) {
-        if (weight >= items[i].second) {
-            weight -= items[i].second;
-            max_value += items[i].first;
-            selected_items.push_back(i);
+    for (const auto& item : items) {
+        if (std::get<1>(item) <= weight) {
+            selected_items.push_back(std::get<2>(item));
+            max_value += std::get<0>(item);
+            weight -= std::get<1>(item);
         }
     }
 
     auto end = std::chrono::high_resolution_clock::now();
-    return std::make_tuple(selected_items, max_value, end - start);
+
+    return {end - start, max_value, selected_items};
 }
 }  // namespace daa::dynamic_programming

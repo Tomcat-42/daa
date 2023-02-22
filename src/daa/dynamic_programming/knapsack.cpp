@@ -8,12 +8,11 @@
 
 // Path: knapsack.hpp
 namespace daa::dynamic_programming {
-
-std::tuple<std::vector<std::intmax_t>, std::intmax_t,
-    std::chrono::duration<double>>
-    knapsack(std::intmax_t weight, const std::vector<std::intmax_t>& weights,
-const std::vector<std::intmax_t>& values, std::size_t n) {
+std::tuple<std::chrono::duration<double>, std::intmax_t, std::vector<std::intmax_t>>
+        knapsack(std::intmax_t weight, const std::vector<std::intmax_t>& values,
+const std::vector<std::intmax_t>& weights) {
     auto start = std::chrono::high_resolution_clock::now();
+    auto n = weights.size();
 
     std::intmax_t max_value = 0;
     std::vector<std::vector<std::intmax_t>> memo(
@@ -47,7 +46,6 @@ const std::vector<std::intmax_t>& values, std::size_t n) {
     }
 
     auto end = std::chrono::high_resolution_clock::now();
-
-    return {selected_items, memo[n][weight], end - start};
+    return {end - start, memo[n][weight], selected_items};
 }
 }  // namespace daa::dynamic_programming

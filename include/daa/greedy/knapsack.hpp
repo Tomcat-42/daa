@@ -14,13 +14,10 @@ namespace daa::greedy {
 
 /// Solves the knapsack problem using a greedy algorithm (with pre-sorting)
 /// @param weight The maximum weight the knapsack can hold.
+/// @param benefits The benefits of the items.
 /// @param weights The weights of the items.
-/// @param values The values of the items.
-/// @param n The number of items.
-/// @return A Tuple containing the items to be selected, the maximum value and
-/// the time taken to solve the problem.
-std::tuple<std::vector<std::intmax_t>, std::intmax_t,
-    std::chrono::duration<double>>
-    knapsack(std::intmax_t weight, const std::vector<std::intmax_t>& weights,
-             const std::vector<std::intmax_t>& values, std::size_t n);
+/// @return A Tuple containing the execution time, the maximum value and the items to be selected.
+std::tuple<std::chrono::duration<double>, std::intmax_t, std::vector<std::intmax_t>>
+        knapsack(std::intmax_t weight, const std::vector<std::intmax_t>& benefits,
+                 const std::vector<std::intmax_t>& weights);
 }  // namespace daa::dynamic_programming
