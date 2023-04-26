@@ -14,13 +14,21 @@ public:
 };
 
 TEST_F(open_addressing_likely_collision, InsertionTest) {
-    // Your insertion test logic here
+    int key = 42;
+    auto result = hash_table.insert(key);
+    ASSERT_TRUE(result.first);
 }
 
 TEST_F(open_addressing_likely_collision, RemovalTest) {
-    // Your removal test logic here
+    int key = 42;
+    hash_table.insert(key);
+    auto result = hash_table.remove(key);
+    ASSERT_TRUE(result.first);
 }
 
 TEST_F(open_addressing_likely_collision, SearchTest) {
-    // Your search test logic here
+    int key = 42;
+    hash_table.insert(key);
+    auto result = hash_table.search(key);
+    ASSERT_TRUE(result.first);
 }
