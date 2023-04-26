@@ -5,7 +5,7 @@ namespace py = pybind11;
 // modules initialization
 void sorting(py::module_ &m);
 void dynamic_programming(py::module_ &m);
-void hashing_separate_chaining(py::module_ &m);
+void greedy(py::module_ &m);
 void hashing(py::module_ &m);
 
 PYBIND11_MODULE(pydaa, m) {
@@ -13,6 +13,6 @@ PYBIND11_MODULE(pydaa, m) {
 
     sorting(m);
     dynamic_programming(m);
-    hashing_separate_chaining(m);
+    greedy(m);
     hashing(m);
 }

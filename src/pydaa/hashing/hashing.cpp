@@ -9,14 +9,14 @@
 namespace py = pybind11;
 
 // modules initialization
-void open_addressing(py::module_ &m);
-void separate_chaining(py::module_ &m);
+void hashing_open_addressing(py::module_ &m);
+void hashing_separate_chaining(py::module_ &m);
 
 void hashing(py::module_ &m) {
     // defs hashing submodule
     auto m_hashing = m.def_submodule("hashing", "Hashing Algorithms");
 
     // Adds open_addressing submodule and separate_chaining submodule
-    open_addressing(m_hashing);
-    separate_chaining(m_hashing);
+    hashing_open_addressing(m_hashing);
+    hashing_separate_chaining(m_hashing);
 }
