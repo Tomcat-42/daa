@@ -10,19 +10,19 @@ namespace daa::hashing {
 template <typename Key, typename HashFunc = std::hash<Key>>
 class open_addressing_hash_table {
 private:
+    enum class entry_state : uint8_t {
+        empty = 0,
+        deleted = 1,
+    };
     std::vector<std::optional<Key>> table;
-    std::vector<char> entry_states;
+    std::vector<entry_state> entry_states;
     HashFunc hash_func;
     size_t size;
 
-    enum class entry_state : uint8_t {
-        empty,
-        deleted
-    };
 
 public:
     open_addressing_hash_table(size_t size, HashFunc hash_func = HashFunc{})
-        : table(size), entry_states(size, static_cast<uint8_t>(entry_state::empty)), hash_func(std::move(hash_func)), size(size) {}
+        : table(size), entry_states(size, entry_state::empty), hash_func(std::move(hash_func)), size(size) {}
 
     auto insert(const Key& key) -> std::pair<bool, std::pair<size_t, size_t>> {
         size_t comparisons = 0;
@@ -31,9 +31,9 @@ public:
         for (size_t i = 0; i < size; i++) {
             comparisons++;
             size_t index = (hash_func(key) + i) % size;
-            if (entry_states[index] == static_cast<uint8_t>(entry_state::empty) || entry_states[index] == static_cast<uint8_t>(entry_state::deleted)) {
+            if (entry_states[index] == entry_state::empty || entry_states[index] == entry_state::deleted) {
                 table[index] = key;
-                entry_states[index] = static_cast<uint8_t>(entry_state::deleted);
+                entry_states[index] = entry_state::deleted;
                 auto end = std::chrono::steady_clock::now();
                 return std::make_pair(true, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
             }
@@ -73,7 +73,7 @@ public:
             if (table[index] && *table[index] == key) {
                 auto end = std::chrono::steady_clock::now();
                 return std::make_pair(true, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
-            } else if (entry_states[index] == static_cast<uint8_t>(entry_state::empty)) {
+            } else if (entry_states[index] == entry_state::empty) {
                 auto end = std::chrono::steady_clock::now();
                 return std::make_pair(false, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
             }
