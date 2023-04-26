@@ -1,18 +1,23 @@
 [
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/greedy/knapsack.cpp.o", "src/pydaa/greedy/knapsack.cpp"],
-  "file": "src/pydaa/greedy/knapsack.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/main/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/dynamic_programming/knapsack.cpp.o", "src/pydaa/dynamic_programming/knapsack.cpp"],
-  "file": "src/pydaa/dynamic_programming/knapsack.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/greedy/knapsack.cpp.o", "src/daa/greedy/knapsack.cpp"],
+  "file": "src/daa/greedy/knapsack.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/sorting/quicksort.cpp.o", "src/pydaa/sorting/quicksort.cpp"],
-  "file": "src/pydaa/sorting/quicksort.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/dynamic_programming/knapsack.cpp.o", "src/daa/dynamic_programming/knapsack.cpp"],
+  "file": "src/daa/dynamic_programming/knapsack.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/sorting/quicksort.cpp.o", "src/daa/sorting/quicksort.cpp"],
+  "file": "src/daa/sorting/quicksort.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
@@ -36,21 +41,21 @@
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/greedy/knapsack.cpp.o", "src/daa/greedy/knapsack.cpp"],
-  "file": "src/daa/greedy/knapsack.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/greedy/knapsack.cpp.o", "src/pydaa/greedy/knapsack.cpp"],
+  "file": "src/pydaa/greedy/knapsack.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/dynamic_programming/knapsack.cpp.o", "src/daa/dynamic_programming/knapsack.cpp"],
-  "file": "src/daa/dynamic_programming/knapsack.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/dynamic_programming/knapsack.cpp.o", "src/pydaa/dynamic_programming/knapsack.cpp"],
+  "file": "src/pydaa/dynamic_programming/knapsack.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/sorting/quicksort.cpp.o", "src/daa/sorting/quicksort.cpp"],
-  "file": "src/daa/sorting/quicksort.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/sorting/quicksort.cpp.o", "src/pydaa/sorting/quicksort.cpp"],
+  "file": "src/pydaa/sorting/quicksort.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/main/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
-  "file": "src/main.cpp"
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.10", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/pydaa.cpp.o", "src/pydaa/pydaa.cpp"],
+  "file": "src/pydaa/pydaa.cpp"
 }]
