@@ -26,6 +26,9 @@ set_kind("static")
 add_files("src/daa/**/*.cpp")
 -- set_default(false)
 add_packages(table.unpack(lib_deps))
+set_installdir("/usr/local")
+set_targetdir("./daa")
+
 
 -- python bindings library
 target("pydaa")
@@ -36,15 +39,19 @@ add_packages(table.unpack(python_lib_deps))
 -- set_default(true)
 add_files("src/pydaa/**/*.cpp", "src/pydaa/pydaa.cpp")
 add_deps("daa")
+set_installdir("/usr/local")
+set_targetdir("./daa")
 
 -- test target
-target("test")
+target("daa_test")
 set_kind("binary")
 add_files("test/**/*.cpp", "test/main.cpp")
 add_ldflags("-lgtest")
 -- set_default(false)
 add_packages(table.unpack(test_deps))
 add_deps("daa")
+set_installdir("/usr/local")
+set_targetdir("./daa")
 
 -- standalone
 target("main")
@@ -52,3 +59,4 @@ set_kind("binary")
 -- set_default(false)
 add_files("src/main.cpp")
 add_deps("daa")
+

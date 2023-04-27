@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+PROJECT=${1}
+
+DOCKER_BUILDKIT=1 docker build -t tomcat0x42/"$PROJECT" .
+
+# extract the binaries from the container
+docker create --name extract tomcat0x42/"$PROJECT"
+docker cp extract:/"$PROJECT" .
+docker rm extract
