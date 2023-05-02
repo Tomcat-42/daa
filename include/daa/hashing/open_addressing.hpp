@@ -82,6 +82,26 @@ public:
         auto end = std::chrono::steady_clock::now();
         return std::make_pair(false, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
     }
+    // auto search(const Key& key) -> std::pair<bool, std::pair<size_t, size_t>> {
+    //     size_t comparisons = 0;
+    //     auto start = std::chrono::steady_clock::now();
+    //
+    //     size_t i = 0;
+    //     while (i < size) {
+    //         comparisons++;
+    //         size_t index = (hash_func(key) + i) % size;
+    //         if (table[index] && *table[index] == key) {
+    //             auto end = std::chrono::steady_clock::now();
+    //             return std::make_pair(true, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
+    //         } else if (entry_states[index] == entry_state::empty) {
+    //             auto end = std::chrono::steady_clock::now();
+    //             return std::make_pair(false, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
+    //         }
+    //         i++;
+    //     }
+    //     auto end = std::chrono::steady_clock::now();
+    //     return std::make_pair(false, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
+    // }
 };
 
 } // namespace daa::hashing

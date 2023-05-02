@@ -72,10 +72,40 @@ auto main() -> int {
         return key % 10;
     });
 
+    daa::hashing::separate_chaining_hash_table<int, std::function<int(int)>> separate_chaining_table(500, [](int key) {
+        return key % 10;
+    });
+
+    // for (auto& value : values) {
+    //     open_addressing_table.insert(value);
+    //     // print (bool, (time, comps))
+    //     // std::cout << res.first<< std::endl;
+    //     // std::cout << res.second.first << std::endl;
+    //     // std::cout << res.second.second << std::endl;
+    // }
+    //
+    // // now searches
+    // for (auto& value : values) {
+    //     auto res = open_addressing_table.search(value);
+    //     // print (bool, (time, comps))
+    //     // std::cout << res.first<< std::endl;
+    //     // std::cout << res.second.first << std::endl;
+    //     std::cout << res.second.second << std::endl;
+    // }
+
     for (auto& value : values) {
-        auto res = open_addressing_table.insert(value);
+        separate_chaining_table.insert(value);
         // print (bool, (time, comps))
-            // std::cout << res.first<< std::endl;
+        // std::cout << res.first<< std::endl;
+        // std::cout << res.second.first << std::endl;
+        // std::cout << res.second.second << std::endl;
+    }
+
+    // now searches
+    for (auto& value : values) {
+        auto res = separate_chaining_table.search(value);
+        // print (bool, (time, comps))
+        // std::cout << res.first<< std::endl;
         // std::cout << res.second.first << std::endl;
         std::cout << res.second.second << std::endl;
     }
