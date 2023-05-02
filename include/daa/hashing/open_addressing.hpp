@@ -40,7 +40,6 @@ public:
             }
         }
         auto end = std::chrono::steady_clock::now();
-        std::cout << "Comparisons: " << comparisons << std::endl;
         return std::make_pair(false, std::make_pair(std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count(), comparisons));
     }
 

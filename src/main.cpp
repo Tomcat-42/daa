@@ -68,15 +68,15 @@ auto main() -> int {
 
 
 
-    daa::hashing::open_addressing_hash_table<int, std::function<int(int)>> open_addressing_table(50, [](int key) {
+    daa::hashing::open_addressing_hash_table<int, std::function<int(int)>> open_addressing_table(500, [](int key) {
         return key % 10;
     });
 
     for (auto& value : values) {
         auto res = open_addressing_table.insert(value);
         // print (bool, (time, comps))
-        std::cout << res.first<< std::endl;
-        std::cout << res.second.first << std::endl;
+            // std::cout << res.first<< std::endl;
+        // std::cout << res.second.first << std::endl;
         std::cout << res.second.second << std::endl;
     }
 }
