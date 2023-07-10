@@ -7,6 +7,7 @@ void sorting(py::module_ &m);
 void dynamic_programming(py::module_ &m);
 void greedy(py::module_ &m);
 void hashing(py::module_ &m);
+void graph(py::module_ &m);
 
 PYBIND11_MODULE(pydaa, m) {
     m.doc() = "Design and Analysis of Algorithms";
@@ -15,4 +16,5 @@ PYBIND11_MODULE(pydaa, m) {
     dynamic_programming(m);
     greedy(m);
     hashing(m);
+    graph(m);
 }

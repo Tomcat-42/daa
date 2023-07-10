@@ -5,17 +5,19 @@ set_warnings("all", "error")
 -- NOTE: Change later to a more automated config
 add_includedirs("include", "/usr/local/include", "/usr/include")
 
-add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden",
-            "-fno-trapping-math", "-Ofast")
+add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast")
 
 set_optimize("fastest")
 set_policy("check.auto_ignore_flags", false)
 
+add_rules("mode.debug", "mode.release", "mode.releasedbg", "plugin.compile_commands.autoupdate")
+set_defaultmode("releasedbg")
+
 -- set_optimize("agressive")
 
 local lib_deps = {}
-local python_lib_deps = {"pybind11"}
-local test_deps = {"gtest"}
+local python_lib_deps = { "pybind11" }
+local test_deps = { "gtest" }
 
 add_requires("pybind11", "gtest")
 
@@ -28,7 +30,6 @@ add_files("src/daa/**/*.cpp")
 add_packages(table.unpack(lib_deps))
 set_installdir("/usr/local")
 set_targetdir("./daa")
-
 
 -- python bindings library
 target("pydaa")
@@ -59,4 +60,3 @@ set_kind("binary")
 -- set_default(false)
 add_files("src/main.cpp")
 add_deps("daa")
-
