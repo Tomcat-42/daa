@@ -1,136 +1,136 @@
 [
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/main/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
-  "file": "src/main.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/sorting/quicksort/shuffled/quicksort_shuffled_tests.cpp.o", "test/sorting/quicksort/shuffled/quicksort_shuffled_tests.cpp"],
-  "file": "test/sorting/quicksort/shuffled/quicksort_shuffled_tests.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/sorting/quicksort/ordered/quicksort_ordered_tests.cpp.o", "test/sorting/quicksort/ordered/quicksort_ordered_tests.cpp"],
-  "file": "test/sorting/quicksort/ordered/quicksort_ordered_tests.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/sorting/quicksort/reverse_ordered/quicksort_reverse_ordered_tests.cpp.o", "test/sorting/quicksort/reverse_ordered/quicksort_reverse_ordered_tests.cpp"],
-  "file": "test/sorting/quicksort/reverse_ordered/quicksort_reverse_ordered_tests.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/separate_chaining/likely_collisions.cpp.o", "test/hashing/separate_chaining/likely_collisions.cpp"],
-  "file": "test/hashing/separate_chaining/likely_collisions.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/separate_chaining/unlikely_collisions.cpp.o", "test/hashing/separate_chaining/unlikely_collisions.cpp"],
-  "file": "test/hashing/separate_chaining/unlikely_collisions.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/open_addressing/likely_collisions.cpp.o", "test/hashing/open_addressing/likely_collisions.cpp"],
-  "file": "test/hashing/open_addressing/likely_collisions.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/open_addressing/unlikely_collisions.cpp.o", "test/hashing/open_addressing/unlikely_collisions.cpp"],
-  "file": "test/hashing/open_addressing/unlikely_collisions.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/main.cpp.o", "test/main.cpp"],
-  "file": "test/main.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/greedy/knapsack.cpp.o", "src/daa/greedy/knapsack.cpp"],
-  "file": "src/daa/greedy/knapsack.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/dynamic_programming/knapsack.cpp.o", "src/daa/dynamic_programming/knapsack.cpp"],
-  "file": "src/daa/dynamic_programming/knapsack.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/sorting/quicksort.cpp.o", "src/daa/sorting/quicksort.cpp"],
-  "file": "src/daa/sorting/quicksort.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/graph/prim.cpp.o", "src/daa/graph/prim.cpp"],
-  "file": "src/daa/graph/prim.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/graph/graph.cpp.o", "src/daa/graph/graph.cpp"],
-  "file": "src/daa/graph/graph.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/graph/kruskal.cpp.o", "src/daa/graph/kruskal.cpp"],
-  "file": "src/daa/graph/kruskal.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/hashing/open_adress_hashing.cpp.o", "src/daa/hashing/open_adress_hashing.cpp"],
-  "file": "src/daa/hashing/open_adress_hashing.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/hashing/separate_chaining.cpp.o", "src/daa/hashing/separate_chaining.cpp"],
-  "file": "src/daa/hashing/separate_chaining.cpp"
-},
-{
-  "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/greedy/knapsack.cpp.o", "src/pydaa/greedy/knapsack.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/greedy/knapsack.cpp.o", "src/pydaa/greedy/knapsack.cpp"],
   "file": "src/pydaa/greedy/knapsack.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/dynamic_programming/knapsack.cpp.o", "src/pydaa/dynamic_programming/knapsack.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/dynamic_programming/knapsack.cpp.o", "src/pydaa/dynamic_programming/knapsack.cpp"],
   "file": "src/pydaa/dynamic_programming/knapsack.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/sorting/quicksort.cpp.o", "src/pydaa/sorting/quicksort.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/sorting/quicksort.cpp.o", "src/pydaa/sorting/quicksort.cpp"],
   "file": "src/pydaa/sorting/quicksort.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/graph/graph.cpp.o", "src/pydaa/graph/graph.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/graph/graph.cpp.o", "src/pydaa/graph/graph.cpp"],
   "file": "src/pydaa/graph/graph.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/graph/prim/prim.cpp.o", "src/pydaa/graph/prim/prim.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/graph/prim/prim.cpp.o", "src/pydaa/graph/prim/prim.cpp"],
   "file": "src/pydaa/graph/prim/prim.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/graph/kruskal/kruskal.cpp.o", "src/pydaa/graph/kruskal/kruskal.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/graph/kruskal/kruskal.cpp.o", "src/pydaa/graph/kruskal/kruskal.cpp"],
   "file": "src/pydaa/graph/kruskal/kruskal.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/hashing/separate_chaining/separate_chaining.cpp.o", "src/pydaa/hashing/separate_chaining/separate_chaining.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/hashing/separate_chaining/separate_chaining.cpp.o", "src/pydaa/hashing/separate_chaining/separate_chaining.cpp"],
   "file": "src/pydaa/hashing/separate_chaining/separate_chaining.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/hashing/hashing.cpp.o", "src/pydaa/hashing/hashing.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/hashing/hashing.cpp.o", "src/pydaa/hashing/hashing.cpp"],
   "file": "src/pydaa/hashing/hashing.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/hashing/open_addressing/open_addressing.cpp.o", "src/pydaa/hashing/open_addressing/open_addressing.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/hashing/open_addressing/open_addressing.cpp.o", "src/pydaa/hashing/open_addressing/open_addressing.cpp"],
   "file": "src/pydaa/hashing/open_addressing/open_addressing.cpp"
 },
 {
   "directory": "/mnt/files/projects/Unioeste/paa/daa",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-Wall", "-Werror", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/pydaa.cpp.o", "src/pydaa/pydaa.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/p/pybind11/v2.10.0/41ef60b323db424f8cf3967e35d79f9e/include", "-I", "/usr/include/python3.11", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/pydaa/linux/x86_64/release/src/pydaa/pydaa.cpp.o", "src/pydaa/pydaa.cpp"],
   "file": "src/pydaa/pydaa.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/main/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/greedy/knapsack.cpp.o", "src/daa/greedy/knapsack.cpp"],
+  "file": "src/daa/greedy/knapsack.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/dynamic_programming/knapsack.cpp.o", "src/daa/dynamic_programming/knapsack.cpp"],
+  "file": "src/daa/dynamic_programming/knapsack.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/sorting/quicksort.cpp.o", "src/daa/sorting/quicksort.cpp"],
+  "file": "src/daa/sorting/quicksort.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/graph/prim.cpp.o", "src/daa/graph/prim.cpp"],
+  "file": "src/daa/graph/prim.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/graph/graph.cpp.o", "src/daa/graph/graph.cpp"],
+  "file": "src/daa/graph/graph.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/graph/kruskal.cpp.o", "src/daa/graph/kruskal.cpp"],
+  "file": "src/daa/graph/kruskal.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/hashing/open_adress_hashing.cpp.o", "src/daa/hashing/open_adress_hashing.cpp"],
+  "file": "src/daa/hashing/open_adress_hashing.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa/linux/x86_64/release/src/daa/hashing/separate_chaining.cpp.o", "src/daa/hashing/separate_chaining.cpp"],
+  "file": "src/daa/hashing/separate_chaining.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/sorting/quicksort/shuffled/quicksort_shuffled_tests.cpp.o", "test/sorting/quicksort/shuffled/quicksort_shuffled_tests.cpp"],
+  "file": "test/sorting/quicksort/shuffled/quicksort_shuffled_tests.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/sorting/quicksort/ordered/quicksort_ordered_tests.cpp.o", "test/sorting/quicksort/ordered/quicksort_ordered_tests.cpp"],
+  "file": "test/sorting/quicksort/ordered/quicksort_ordered_tests.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/sorting/quicksort/reverse_ordered/quicksort_reverse_ordered_tests.cpp.o", "test/sorting/quicksort/reverse_ordered/quicksort_reverse_ordered_tests.cpp"],
+  "file": "test/sorting/quicksort/reverse_ordered/quicksort_reverse_ordered_tests.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/separate_chaining/likely_collisions.cpp.o", "test/hashing/separate_chaining/likely_collisions.cpp"],
+  "file": "test/hashing/separate_chaining/likely_collisions.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/separate_chaining/unlikely_collisions.cpp.o", "test/hashing/separate_chaining/unlikely_collisions.cpp"],
+  "file": "test/hashing/separate_chaining/unlikely_collisions.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/open_addressing/likely_collisions.cpp.o", "test/hashing/open_addressing/likely_collisions.cpp"],
+  "file": "test/hashing/open_addressing/likely_collisions.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/hashing/open_addressing/unlikely_collisions.cpp.o", "test/hashing/open_addressing/unlikely_collisions.cpp"],
+  "file": "test/hashing/open_addressing/unlikely_collisions.cpp"
+},
+{
+  "directory": "/mnt/files/projects/Unioeste/paa/daa",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-std=c++20", "-Iinclude", "-I/usr/local/include", "-I/usr/include", "-I", "/home/pablo/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include", "-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trapping-math", "-Ofast", "-DNDEBUG", "-o", "build/.objs/daa_test/linux/x86_64/release/test/main.cpp.o", "test/main.cpp"],
+  "file": "test/main.cpp"
 }]
