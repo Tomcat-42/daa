@@ -1,7 +1,9 @@
 #pragma once
 
+#include <initializer_list>
 #include <map>
 #include <set>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -116,7 +118,12 @@ auto Graph<T>::get_adjacent_vertices(const T& vertex) const -> std::set<T> {
 
 template <typename T>
 auto Graph<T>::get_edge_weight(const T& from, const T& to) const -> T {
-  return adjacency_list.at(from).at(to);
+  auto edges = adjacency_list.at(from);
+  for (auto& edge : edges) {
+    if (edge.first == to)
+      return edge.second;
+  }
+  throw std::runtime_error("Edge not found");
 }
 
 template <typename T>
