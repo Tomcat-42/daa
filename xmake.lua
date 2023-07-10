@@ -1,6 +1,5 @@
 set_languages("c++20")
 add_rules("mode.debug", "mode.release")
-set_warnings("all", "error")
 
 -- NOTE: Change later to a more automated config
 add_includedirs("include", "/usr/local/include", "/usr/include")
@@ -10,8 +9,7 @@ add_cxflags("-fno-strict-aliasing", "-fPIC", "-fvisibility=hidden", "-fno-trappi
 set_optimize("fastest")
 set_policy("check.auto_ignore_flags", false)
 
-add_rules("mode.debug", "mode.release", "mode.releasedbg", "plugin.compile_commands.autoupdate")
-set_defaultmode("releasedbg")
+add_rules("plugin.compile_commands.autoupdate")
 
 -- set_optimize("agressive")
 
