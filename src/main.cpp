@@ -1,112 +1,34 @@
-#include <functional>
-#include <vector>
-#include <list>
-#include <iostream>
 #include <algorithm>
-#include <daa/hashing/open_addressing.hpp>
-#include <daa/hashing/separate_chaining.hpp>
-
+#include <daa/graph/graph.hpp>
+#include <daa/graph/kruskal.hpp>
+#include <daa/graph/prim.hpp>
+#include <functional>
 #include <iostream>
+#include <list>
+#include <ostream>
 #include <vector>
-#include <random>
+
 #include <algorithm>
 #include <chrono>
+#include <iostream>
+#include <random>
+#include <vector>
 
 auto main() -> int {
-    std::vector<int> values = {
-        2,
-        63,
-        38,
-        22,
-        25,
-        50,
-        20,
-        8,
-        88,
-        97,
-        94,
-        19,
-        56,
-        39,
-        41,
-        83,
-        95,
-        74,
-        4,
-        89,
-        91,
-        76,
-        71,
-        3,
-        75,
-        53,
-        7,
-        96,
-        68,
-        10,
-        70,
-        48,
-        82,
-        29,
-        33,
-        55,
-        24,
-        100,
-        34,
-        77,
-        72,
-        62,
-        1,
-        14,
-        59,
-        87,
-        32,
-        79,
-        90,
-        43
-    };
+  daa::graph::Graph<int> graph = {{1, {{2, 1}, {3, 3}}},
+                                  {2, {{1, 1}, {3, 2}}},
+                                  {3, {{1, 3}, {2, 2}}}};
 
+  auto [mst_kruskal, time_kuskal, comparsions_kruskal] = daa::graph::kruskal(graph);
+  auto [mst_prim, time_prim, comparsions_prim] = daa::graph::prim(graph);
 
+  std::cout << "Graph: " << std::endl << graph << std::endl;
 
-    daa::hashing::open_addressing_hash_table<int, std::function<int(int)>> open_addressing_table(500, [](int key) {
-        return key % 10;
-    });
+  std::cout << "Mst kruskal: " << std::endl << mst_kruskal << std::endl;
+  std::cout << "Time kruskal: " << time_kuskal.count() << std::endl;
+  std::cout << "Comparsions kruskal: " << comparsions_kruskal << std::endl;
 
-    daa::hashing::separate_chaining_hash_table<int, std::function<int(int)>> separate_chaining_table(500, [](int key) {
-        return key % 10;
-    });
-
-    // for (auto& value : values) {
-    //     open_addressing_table.insert(value);
-    //     // print (bool, (time, comps))
-    //     // std::cout << res.first<< std::endl;
-    //     // std::cout << res.second.first << std::endl;
-    //     // std::cout << res.second.second << std::endl;
-    // }
-    //
-    // // now searches
-    // for (auto& value : values) {
-    //     auto res = open_addressing_table.search(value);
-    //     // print (bool, (time, comps))
-    //     // std::cout << res.first<< std::endl;
-    //     // std::cout << res.second.first << std::endl;
-    //     std::cout << res.second.second << std::endl;
-    // }
-
-    for (auto& value : values) {
-        separate_chaining_table.insert(value);
-        // print (bool, (time, comps))
-        // std::cout << res.first<< std::endl;
-        // std::cout << res.second.first << std::endl;
-        // std::cout << res.second.second << std::endl;
-    }
-
-    // now searches
-    for (auto& value : values) {
-        auto res = separate_chaining_table.search(value);
-        // print (bool, (time, comps))
-        // std::cout << res.first<< std::endl;
-        // std::cout << res.second.first << std::endl;
-        std::cout << res.second.second << std::endl;
-    }
+  std::cout << "Mst prim: " << std::endl << mst_prim << std::endl;
+  std::cout << "Time prim: " << time_prim.count() << std::endl;
+  std::cout << "Comparsions prim: " << comparsions_prim << std::endl;
 }
